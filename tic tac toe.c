@@ -115,6 +115,20 @@ int posswin(int p)
         i+=3;
     }
 
+    i = 1;
+    while(i<=3)//column check
+    {
+        if(board[i] * board[i+3] * board[i+6] == check_val)
+        {
+            if(board[i] == 2)
+                return i;
+            if(board[i+3] == 2)
+                return i+3;
+            if(board[i+6] == 2)
+                return i+6;
+        }
+        i++;
+    }
 
 
     if(board[1] * board[5] * board[9] == check_val)
